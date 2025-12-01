@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Cinzel:wght@400;700&family=Cinzel+Decorative:wght@700&family=Dancing+Script:wght@700&family=Great+Vibes&family=Limelight&family=Lobster&family=Orbitron:wght@700&family=Oswald:wght@700&family=Pacifico&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;500&family=Rye&display=swap');
+
+:root {
+    --color-bg: #1a0b0b;
+    --color-card-bg: #2a1212;
+    --color-text: #e0e0e0;
+    --color-accent: #ff004c;
+    /* Hazbin Red */
+    --color-gold: #d4af37;
+    --color-neon: #ff00ff;
+    --font-heading: 'Cinzel', serif;
+    --font-subheading: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    color: var(--color-gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Utilities */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 2px solid var(--color-gold);
+    color: var(--color-gold);
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    margin: 1rem;
+}
+
+.btn:hover {
+    background: var(--color-gold);
+    color: var(--color-bg);
+    box-shadow: 0 0 15px var(--color-gold);
+}
+
+/* Animations & Glamm */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes neonPulse {
+    0% {
+        box-shadow: 0 0 5px var(--color-gold), 0 0 10px var(--color-gold);
+    }
+
+    50% {
+        box-shadow: 0 0 20px var(--color-gold), 0 0 30px var(--color-neon);
+    }
+
+    100% {
+        box-shadow: 0 0 5px var(--color-gold), 0 0 10px var(--color-gold);
+    }
+}
+
+/* Landing Page */
+.landing {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle, #3a1a1a 0%, #1a0b0b 100%);
+}
+
+.landing-container {
+    animation: fadeIn 1.5s ease-out;
+}
+
+.landing h1 {
+    font-size: 5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px var(--color-accent), 0 0 20px var(--color-accent), 0 0 40px var(--color-neon);
+    animation: fadeIn 1s ease-out;
+}
+
+.slogan {
+    font-family: var(--font-subheading);
+    font-size: 2rem;
+    color: var(--color-gold);
+    text-shadow: 0 0 5px var(--color-gold);
+    margin-bottom: 4rem;
+    animation: fadeIn 1.5s ease-out 0.5s backwards;
+}
+
+.btn-glam {
+    font-size: 1.5rem;
+    padding: 1.5rem 4rem;
+    border: 3px solid var(--color-gold);
+    background: rgba(0, 0, 0, 0.6);
+    color: var(--color-gold);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    animation: neonPulse 3s infinite;
+}
+
+.btn-glam:hover {
+    background: var(--color-gold);
+    color: #000;
+    box-shadow: 0 0 50px var(--color-gold);
+    transform: scale(1.05);
+}
+
+/* Menu Grid Layout */
+#menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.drink-item {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    /* Stack image and name */
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.drink-item img {
+    max-width: 100%;
+    height: auto;
+    max-height: 350px;
+    /* Reduced slightly to make room for text */
+    object-fit: contain;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.5));
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.drink-name {
+    font-size: 1.5rem;
+    color: var(--color-gold);
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    opacity: 0.8;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.drink-item:hover img {
+    transform: translateY(-15px) scale(1.05);
+    filter: drop-shadow(0 20px 25px rgba(255, 0, 76, 0.4));
+    /* Hazbin Red Glow */
+}
+
+.drink-item:hover .drink-name {
+    opacity: 1;
+    color: var(--color-accent);
+}
+
+.drink-detail-container {
+    display: flex;
+    min-height: 100vh;
+    padding: 2rem;
+    gap: 2rem;
+    align-items: center;
+}
+
+.drink-illustration img {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.drink-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+}
+
+.drink-header {
+    display: flex;
+    justify-content: flex-end;
+    /* Align logo to right */
+    align-items: center;
+    margin-bottom: 2rem;
+    min-height: 100px;
+}
+
+.drink-logo {
+    width: 200px;
+    /* Increased size for visibility since text is gone */
+    height: auto;
+    object-fit: contain;
+}
+
+.recipe-section {
+    background: rgba(0, 0, 0, 0.3);
+    /* More transparent to show bg color */
+    padding: 2rem;
+    border: 2px solid var(--color-gold);
+    border-radius: 8px;
+    overflow-y: auto;
+    flex-grow: 1;
+    backdrop-filter: blur(5px);
+}
+
+.recipe-block {
+    margin-bottom: 2rem;
+    border: 1px solid transparent;
+    /* For JS styling */
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.recipe-block h3 {
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-gold);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.recipe-block ul {
+    list-style-type: none;
+    margin-bottom: 1rem;
+}
+
+.recipe-block li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.recipe-block li::before {
+    content: '♦';
+    color: currentColor;
+    /* Inherit from parent */
+    position: absolute;
+    left: 0;
+}
+
+.back-btn {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+    /* Ensure visibility on light backgrounds */
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.tab-btn {
+    margin: 0;
+    flex: 1;
+    text-align: center;
+    border-width: 2px;
+}
+
+.tab-btn.active {
+    /* Styles handled by JS for dynamic colors, but default here */
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .drink-detail-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .drink-header {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .drink-content {
+        height: auto;
+        width: 100%;
+    }
+
+    .drink-illustration img {
+        max-height: 50vh;
+    }
+
+    .back-btn {
+        position: absolute;
+    }
+}
