@@ -28,83 +28,189 @@ Cheater's Guide: Includes "prop-safe" versions for you cosplayers who want to lo
 
 Here's the deal. Don't ask for a reshuffle.
 
-The Player
+<p>
+<b>The Player</b>
 
-The Drink
 
-The Bluff (Flavor)
 
-Husk (The House)
 
-Blackberry Bramble
+<b>The Drink</b>
+
+
+
+
+<b>The Bluff (Flavor)</b>
+</p>
+
+<hr>
+
+<p>
+<b>Husk (The House)</b>
+
+
+
+
+<b>Blackberry Bramble</b>
+
+
+
 
 Gin & Blackberries. Dark and bitter, like me.
+</p>
 
-Alastor
+<p>
+<b>Alastor</b>
 
-Dirty Shirley Temple
+
+
+
+<b>Dirty Shirley Temple</b>
+
+
+
 
 Cherry & Lime. Smells like trouble.
+</p>
 
-Angel Dust
+<p>
+<b>Angel Dust</b>
 
-Frozen Sex on the Beach
+
+
+
+<b>Frozen Sex on the Beach</b>
+
+
+
 
 Peach Slushie. Too much pink, too much noise.
+</p>
 
-Charlie
+<p>
+<b>Charlie</b>
 
-Strawberry Coconut Daiquiri
+
+
+
+<b>Strawberry Coconut Daiquiri</b>
+
+
+
 
 Sweet stuff. Tastes like unearned optimism.
+</p>
 
-Vaggie
+<p>
+<b>Vaggie</b>
 
-Purple Rain
+
+
+
+<b>Purple Rain</b>
+
+
+
 
 Sour Citrus. Sharp edges.
+</p>
 
-Sir Pentious
+<p>
+<b>Sir Pentious</b>
 
-Cobra's Fang
+
+
+
+<b>Cobra's Fang</b>
+
+
+
 
 Rum & Passion Fruit. Tries too hard.
+</p>
 
-Niffty
+<p>
+<b>Niffty</b>
 
-Old Fashioned
+
+
+
+<b>Old Fashioned</b>
+
+
+
 
 Bourbon. Small glass, big kick.
+</p>
 
-Lucifer
+<p>
+<b>Lucifer</b>
 
-Candy Apple Cosmo
+
+
+
+<b>Candy Apple Cosmo</b>
+
+
+
 
 Apple & Chocolate. King of the castle.
+</p>
 
-Velvette
+<p>
+<b>Velvette</b>
 
-Red Velvet Martini
+
+
+
+<b>Red Velvet Martini</b>
+
+
+
 
 Chocolate Cream. Trendy garbage.
+</p>
 
-Vox
+<p>
+<b>Vox</b>
 
-Shark Bite
+
+
+
+<b>Shark Bite</b>
+
+
+
 
 Blue Curacao. Artificial flavor for an artificial face.
+</p>
 
-Valentino
+<p>
+<b>Valentino</b>
 
-Blueberry Colada
+
+
+
+<b>Blueberry Colada</b>
+
+
+
 
 Coconut & Berry. Leaves a bad taste in your mouth.
+</p>
 
-Cherri Bomb
+<p>
+<b>Cherri Bomb</b>
 
-Cherry Bomb
+
+
+
+<b>Cherry Bomb</b>
+
+
+
 
 Spiced Rum & Cola. Volatile.
+</p>
 
 🃏 Buy In (Installation)
 
@@ -118,17 +224,17 @@ A text editor (VS Code, Notepad, I don't care).
 
 Installation
 
-Deal the Cards (Clone):
+1. Deal the Cards (Clone):
 
 git clone [https://github.com/funnyeivske/husks-jackpot-bar.git](https://github.com/funnyeivske/husks-jackpot-bar.git)
 
 
-Sit at the Table:
+2. Sit at the Table:
 
 cd husks-jackpot-bar
 
 
-Place Your Bet:
+3. Place Your Bet:
 
 Open index.html.
 
