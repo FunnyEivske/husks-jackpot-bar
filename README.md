@@ -5,6 +5,8 @@
 ### *Read 'Em and Weep (or Drink)*
 
 > *"Life's a gamble. The drink? That's a guarantee. Now pick a card or get out."*
+>
+> https://funnyeivske.github.io/husks-jackpot-bar/
 
 ![Status](https://img.shields.io/badge/Status-Open_for_Business-red)
 ![Manager](https://img.shields.io/badge/Manager-Husk-black)
