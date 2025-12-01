@@ -134,7 +134,17 @@ Open index.html.
 
 Drink responsibly. Or don't. The house takes its cut either way.
 
+🛠️ The Rigging (Tech Stack)
+
+HTML5: The table felt.
+
+CSS3: The neon lights.
+
+JavaScript: The sleight of hand.
+
 🎭 For the High Rollers (Cosplay)
+
+Since I know you lot like to dress up:
 
 Photoshoots: The mocktails look just like the real deal. Perfect for when you need to look cool in a photo but still need to drive the getaway car.
 
