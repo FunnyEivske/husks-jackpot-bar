@@ -49,12 +49,12 @@ export const drinks = [
         mocktail: {
             name: "Safe Version",
             ingredients: [
-                "2 fl oz Black Tea (Strong) mixed with a drop of Molasses or Dark Grape Juice (Substitute for Dark Rum).",
-                "0.5 fl oz Orange Juice.",
-                "0.5 fl oz Lime Juice.",
-                "0.5 fl oz Passion Fruit Syrup.",
-                "0.25 fl oz Simple Syrup with a pinch of Cardamom/Clove (Substitute for Swedish Punsch).",
-                "0.25 fl oz Grenadine.",
+                "60ml Black Tea (Strong) mixed with a drop of Molasses or Dark Grape Juice (Substitute for Dark Rum).",
+                "15ml Orange Juice.",
+                "15ml Lime Juice.",
+                "15ml Passion Fruit Syrup.",
+                "7.5ml Simple Syrup with a pinch of Cardamom/Clove (Substitute for Swedish Punsch).",
+                "7.5ml Grenadine.",
                 "1 drop of Anise Extract or Licorice Tea (Substitute for Absinthe).",
                 "Garnish: 2 Pineapple fronds, 1 Snake orange peel, 3 Maraschino cherries."
             ],
@@ -68,12 +68,12 @@ export const drinks = [
         cocktail: {
             name: "Cobras Fang",
             ingredients: [
-                "2 fl oz Dark Rum.",
-                "0.5 fl oz Orange Juice.",
-                "0.5 fl oz Lime Juice.",
-                "0.5 fl oz Passion Fruit Syrup.",
-                "0.25 fl oz Swedish Punsch.",
-                "0.25 fl oz Grenadine.",
+                "60ml Dark Rum.",
+                "15ml Orange Juice.",
+                "15ml Lime Juice.",
+                "15ml Passion Fruit Syrup.",
+                "7.5ml Swedish Punsch.",
+                "7.5ml Grenadine.",
                 "2 Dashes Absinthe.",
                 "Garnish: 2 Pineapple fronds, 1 Snake orange peel, 3 Maraschino cherries."
             ],
@@ -96,12 +96,12 @@ export const drinks = [
         mocktail: {
             name: "No Bite",
             ingredients: [
-                "1 1/2 oz Coconut Water or Coconut Cream mixed with a splash of Sprite (Substitute for Malibu).",
-                "1 oz Blue Curacao Syrup (Non-alcoholic syrup, e.g., Monin brand) OR Blue Raspberry Gatorade/Soda.",
-                "1.5 oz Pineapple Juice.",
-                "2 oz Sprite.",
-                "1/4 oz Grenadine.",
-                "1/2 oz Lime Juice.",
+                "45ml Coconut Water or Coconut Cream mixed with a splash of Sprite (Substitute for Malibu).",
+                "30ml Blue Curacao Syrup (Non-alcoholic syrup, e.g., Monin brand) OR Blue Raspberry Gatorade/Soda.",
+                "45ml Pineapple Juice.",
+                "60ml Sprite.",
+                "7.5ml Grenadine.",
+                "15ml Lime Juice.",
                 "Garnish: Cherry, Lime wedge, Blue Sugar."
             ],
             instructions: [
@@ -116,12 +116,12 @@ export const drinks = [
         cocktail: {
             name: "Shark Bite",
             ingredients: [
-                "1 1/2 oz Malibu Rum.",
-                "1 oz Blue Curacao.",
-                "1.5 oz Pineapple Juice.",
-                "2 oz Sprite.",
-                "1/4 oz Grenadine.",
-                "1/2 oz Lime Juice.",
+                "45ml Malibu Rum.",
+                "30ml Blue Curacao.",
+                "45ml Pineapple Juice.",
+                "60ml Sprite.",
+                "7.5ml Grenadine.",
+                "15ml Lime Juice.",
                 "Garnish: Cherry and Lime, Blue Sugar."
             ],
             instructions: [
@@ -148,9 +148,9 @@ export const drinks = [
                 "4 Fresh Sweet Cherries, halved.",
                 "1/4 Lemon.",
                 "1/4 Lime.",
-                "1/2 ounce Simple Syrup.",
+                "15ml Simple Syrup.",
                 "Pinch of Allspice or Cinnamon (Substitute for Bitters flavor).",
-                "2 ounces Cherry Cola or Dr. Pepper (Substitute for Dark Rum depth).",
+                "60ml Cherry Cola or Dr. Pepper (Substitute for Dark Rum depth).",
                 "Sugar (for rim).",
                 "Note: Original instructions mention mint leaves, though not listed in ingredients."
             ],
@@ -169,9 +169,9 @@ export const drinks = [
                 "4 Fresh Sweet Cherries, halved.",
                 "1/4 of a Lemon.",
                 "1/4 of a Lime.",
-                "1/2 ounce Simple Syrup.",
+                "15ml Simple Syrup.",
                 "1 Dash Angostura Bitters.",
-                "2 Ounces Dark Rum.",
+                "60ml Dark Rum.",
                 "Sugar (for rim)."
             ],
             instructions: [
@@ -193,11 +193,11 @@ export const drinks = [
         mocktail: {
             name: "Virgin Colada",
             ingredients: [
-                "2 oz Light Coconut Milk.",
-                "1 oz Blueberry Lime Juice (Or blueberry syrup mixed with lime juice).",
-                "1 oz Coconut Water (Substitute for Coconut Rum).",
-                "1 oz White Grape Juice or Sprite (Substitute for Light Rum).",
-                "1-2 oz Pineapple Juice (Adjust to taste).",
+                "60ml Light Coconut Milk.",
+                "30ml Blueberry Lime Juice (Or blueberry syrup mixed with lime juice).",
+                "30ml Coconut Water (Substitute for Coconut Rum).",
+                "30ml White Grape Juice or Sprite (Substitute for Light Rum).",
+                "30-60ml Pineapple Juice (Adjust to taste).",
                 "Strawberry Syrup.",
                 "Whipped Cream.",
                 "Maraschino Cherry.",
@@ -213,11 +213,11 @@ export const drinks = [
         cocktail: {
             name: "Blueberry Colada",
             ingredients: [
-                "2 oz Light Coconut Milk.",
-                "1 oz Blueberry Lime Juice.",
-                "1 oz Coconut Rum.",
-                "1 oz Light Rum.",
-                "10oz Pineapple Juice (Note: This is written as 10oz in the original image, but that is likely a typo for 1oz. 10oz would overflow most glasses. Proceed with caution!).",
+                "60ml Light Coconut Milk.",
+                "30ml Blueberry Lime Juice.",
+                "30ml Coconut Rum.",
+                "30ml Light Rum.",
+                "30ml Pineapple Juice (Note: This is written as 10oz in the original image, but that is likely a typo for 1oz. 10oz would overflow most glasses. Proceed with caution!).",
                 "Strawberry Syrup.",
                 "Whipped Cream.",
                 "Maraschino Cherry.",
@@ -241,8 +241,8 @@ export const drinks = [
         mocktail: {
             name: "Mock-Cosmo",
             ingredients: [
-                "2 oz Green Apple Syrup mixed with Sparkling Water OR Green Apple Soda (Substitute for Vodka).",
-                "1 cup All Natural Cranberry Juice (Adjust amount to fit glass).",
+                "60ml Green Apple Syrup mixed with Sparkling Water OR Green Apple Soda (Substitute for Vodka).",
+                "240ml All Natural Cranberry Juice (Adjust amount to fit glass).",
                 "1 Fresh Lime Wedge.",
                 "Garnish: 1 Peeps Marshmallow, Apple Slices, White Chocolate."
             ],
@@ -257,8 +257,8 @@ export const drinks = [
         cocktail: {
             name: "Candy Apple Cosmo",
             ingredients: [
-                "2 oz Smirnoff Green Apple Vodka.",
-                "1 Cup All Natural Cranberry Juice.",
+                "60ml Smirnoff Green Apple Vodka.",
+                "240ml All Natural Cranberry Juice.",
                 "1 Fresh Lime Wedge.",
                 "1 Peeps Marshmallow, Apple Slices and White Chocolate for garnish."
             ],
@@ -281,16 +281,16 @@ export const drinks = [
         mocktail: {
             name: "Radio Demon's Delight",
             ingredients: [
-                "2 oz Tart Cherry Juice or Extra Grenadine (Substitute for Cherry Vodka).",
-                "1 oz Grenadine.",
-                "1/2 oz Fresh Lime Juice.",
-                "4 oz Lemon-Lime Soda (Sprite/7Up).",
+                "60ml Tart Cherry Juice or Extra Grenadine (Substitute for Cherry Vodka).",
+                "30ml Grenadine.",
+                "15ml Fresh Lime Juice.",
+                "120ml Lemon-Lime Soda (Sprite/7Up).",
                 "Crushed Ice.",
                 "Garnish: Maraschino Cherries, Mint, and Lime Wedges."
             ],
             instructions: [
                 "Pour the Tart Cherry Juice (or extra grenadine) over crushed ice in a tall glass.",
-                "Drizzle the 1 oz grenadine and lime juice over the drink.",
+                "Drizzle the 30ml grenadine and lime juice over the drink.",
                 "Top the glass off with the lemon-lime soda.",
                 "Give everything a good stir.",
                 "Garnish generously with cherries, mint, and lime."
@@ -300,10 +300,10 @@ export const drinks = [
             name: "Dirty Shirley Temple",
             ingredients: [
                 "Crushed Ice.",
-                "2 Ounces Cherry Vodka.",
-                "1 Ounce Grenadine.",
-                "1/2 Ounce Lime Juice, Fresh Squeezed.",
-                "4 Ounces Lemon-Lime Soda.",
+                "60ml Cherry Vodka.",
+                "30ml Grenadine.",
+                "15ml Lime Juice, Fresh Squeezed.",
+                "120ml Lemon-Lime Soda.",
                 "Garnish: Maraschino Cherries, Mint and Lime Wedges."
             ],
             instructions: [
@@ -326,12 +326,12 @@ export const drinks = [
         mocktail: {
             name: "Frozen Virgin on the Beach",
             ingredients: [
-                "1.5 oz White Grape Juice or Coconut Water (Substitute for Vodka).",
-                "1 oz Peach Nectar or Peach Syrup (Substitute for Peach Schnapps).",
-                "1 oz Peach Purée.",
-                "1.5 oz Orange Juice.",
-                "1.5 oz Cranberry Juice.",
-                "1 Cup of Ice.",
+                "45ml White Grape Juice or Coconut Water (Substitute for Vodka).",
+                "30ml Peach Nectar or Peach Syrup (Substitute for Peach Schnapps).",
+                "30ml Peach Purée.",
+                "45ml Orange Juice.",
+                "45ml Cranberry Juice.",
+                "240ml of Ice.",
                 "Garnish: Orange Slice, Whipped Cream, White Chocolate, Cherries."
             ],
             instructions: [
@@ -346,12 +346,12 @@ export const drinks = [
         cocktail: {
             name: "Frozen Sex on the Beach",
             ingredients: [
-                "1.5 oz Vodka.",
-                "1 oz Peach Schnapps.",
-                "1 oz Peach Purée.",
-                "1.5 oz Orange Juice.",
-                "1.5 oz Cranberry Juice.",
-                "1 Cup of Ice.",
+                "45ml Vodka.",
+                "30ml Peach Schnapps.",
+                "30ml Peach Purée.",
+                "45ml Orange Juice.",
+                "45ml Cranberry Juice.",
+                "240ml of Ice.",
                 "Garnish: Orange Slice, Whipped Cream, White Chocolate."
             ],
             instructions: [
@@ -374,15 +374,15 @@ export const drinks = [
             name: "Princess's Parfait",
             ingredients: [
                 "For Strawberry Layer:",
-                "8oz Frozen Strawberries.",
-                "3oz Water or Apple Juice (Substitute for White Rum).",
-                "1oz Simple Syrup.",
+                "225g Frozen Strawberries.",
+                "90ml Water or Apple Juice (Substitute for White Rum).",
+                "30ml Simple Syrup.",
                 "For Coconut Layer:",
-                "3oz Coconut Cream.",
-                "2oz Coconut Water or Milk (Substitute for Coconut Rum).",
-                "1/2oz Lime Juice.",
-                "1oz Simple Syrup.",
-                "1 1/2 cup of Ice.",
+                "90ml Coconut Cream.",
+                "60ml Coconut Water or Milk (Substitute for Coconut Rum).",
+                "15ml Lime Juice.",
+                "30ml Simple Syrup.",
+                "360ml of Ice.",
                 "Garnish: Whipped Cream, Sprinkles, Rainbow Belt."
             ],
             instructions: [
@@ -396,8 +396,8 @@ export const drinks = [
         cocktail: {
             name: "Strawberry Coconut Daiquiri",
             ingredients: [
-                "For Strawberry Layer: 8oz Frozen Strawberries, 3oz White Rum, 1oz Simple Syrup.",
-                "For Coconut Layer: 3oz Coconut Cream, 2oz Coconut Rum, 1/2oz Lime Juice, 1oz Simple Syrup, 1 1/2 cup of Ice.",
+                "For Strawberry Layer: 225g Frozen Strawberries, 90ml White Rum, 30ml Simple Syrup.",
+                "For Coconut Layer: 90ml Coconut Cream, 60ml Coconut Rum, 15ml Lime Juice, 30ml Simple Syrup, 360ml of Ice.",
                 "Garnish: Whipped Cream, Sprinkles, Rainbow Belt."
             ],
             instructions: [
@@ -423,8 +423,8 @@ export const drinks = [
                 "2 Teaspoons Simple Syrup.",
                 "1 Teaspoon Water.",
                 "2 Dashes Orange Bitters (Alcohol-free) or Pinch of Cinnamon & Clove (Substitute for Bitters).",
-                "1 (1.5 fl oz) Jigger Strong Black Tea sweetened with Maple Syrup OR Apple Juice with a drop of Vanilla (Substitute for Bourbon).",
-                "1 Cup Ice Cubes.",
+                "1 (45ml) Jigger Strong Black Tea sweetened with Maple Syrup OR Apple Juice with a drop of Vanilla (Substitute for Bourbon).",
+                "240ml Ice Cubes.",
                 "Garnish: Orange slice and Maraschino cherry."
             ],
             instructions: [
@@ -440,8 +440,8 @@ export const drinks = [
                 "2 Teaspoons Simple Syrup.",
                 "1 Teaspoon Water.",
                 "2 Dashes Bitters.",
-                "1 Cup Ice Cubes.",
-                "1 (1.5 fluid ounce) Jigger Bourbon Whiskey.",
+                "240ml Ice Cubes.",
+                "1 (45ml) Jigger Bourbon Whiskey.",
                 "Garnish: Orange Slice and Maraschino Cherry."
             ],
             instructions: [
@@ -506,11 +506,11 @@ export const drinks = [
         mocktail: {
             name: "Blackberry Bramble Sober",
             ingredients: [
-                "3/4 Ounce Freshly Squeezed Lemon Juice.",
+                "22.5ml Freshly Squeezed Lemon Juice.",
                 "6 Large Blackberries.",
-                "1/2 Ounce Blackcurrant Syrup (e.g., Ribena) or Blackberry Syrup (Substitute for Crème de Cassis).",
-                "1/2 Ounce Simple Syrup.",
-                "1 1/2 Ounces Tonic Water or Juniper Berry Tea (Cooled) (Substitute for Gin).",
+                "15ml Blackcurrant Syrup (e.g., Ribena) or Blackberry Syrup (Substitute for Crème de Cassis).",
+                "15ml Simple Syrup.",
+                "45ml Tonic Water or Juniper Berry Tea (Cooled) (Substitute for Gin).",
                 "Ice.",
                 "Garnish: Blackberries, Lemon slice."
             ],
@@ -523,11 +523,11 @@ export const drinks = [
         cocktail: {
             name: "Blackberry Bramble",
             ingredients: [
-                "3/4 Ounce Freshly Squeezed Lemon Juice.",
+                "22.5ml Freshly Squeezed Lemon Juice.",
                 "6 Large Blackberries.",
-                "1/2 Ounce Crème de Cassis.",
-                "1/2 Ounce Simple Syrup.",
-                "1 1/2 Ounces Gin.",
+                "15ml Crème de Cassis.",
+                "15ml Simple Syrup.",
+                "45ml Gin.",
                 "Garnish: Blackberries."
             ],
             instructions: [
