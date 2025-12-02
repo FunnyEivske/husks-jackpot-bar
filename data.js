@@ -38,8 +38,8 @@ export const drinks = [
             ]
         },
         images: {
-            logo: "https://file.garden/Z-PhMwF-KmRdflZZ/Hazbin/Screenshot%202025-12-01%20120435.png",
-            illustration: "https://file.garden/Z-PhMwF-KmRdflZZ/Hazbin/Screenshot%202025-12-01%20120443.png"
+            logo: "./Media/Drawings/Velvette.png",
+            illustration: "./Media/Drawings/Velvette.png"
         }
     },
     {
@@ -85,8 +85,8 @@ export const drinks = [
             ]
         },
         images: {
-            logo: "https://file.garden/Z-PhMwF-KmRdflZZ/Hazbin/Screenshot%202025-12-01%20120435.png",
-            illustration: "https://file.garden/Z-PhMwF-KmRdflZZ/Hazbin/Screenshot%202025-12-01%20120443.png"
+            logo: "./Media/Drawings/SirPentious.png",
+            illustration: "./Media/Drawings/SirPentious.png"
         }
     },
     {
@@ -134,8 +134,8 @@ export const drinks = [
             ]
         },
         images: {
-            logo: "https://file.garden/Z-PhMwF-KmRdflZZ/Hazbin/Screenshot%202025-12-01%20120435.png",
-            illustration: "https://file.garden/Z-PhMwF-KmRdflZZ/Hazbin/Screenshot%202025-12-01%20120443.png"
+            logo: "./Media/Drawings/Vox.png",
+            illustration: "./Media/Drawings/Vox.png"
         }
     },
     {
@@ -182,8 +182,8 @@ export const drinks = [
             ]
         },
         images: {
-            logo: "https://file.garden/Z-PhMwF-KmRdflZZ/Hazbin/Screenshot%202025-12-01%20120435.png",
-            illustration: "https://file.garden/Z-PhMwF-KmRdflZZ/Hazbin/Screenshot%202025-12-01%20120443.png"
+            logo: "./Media/Drawings/Cherri.png",
+            illustration: "./Media/Drawings/Cherri.png"
         }
     },
     {
@@ -230,8 +230,8 @@ export const drinks = [
             ]
         },
         images: {
-            logo: "https://file.garden/Z-PhMwF-KmRdflZZ/Hazbin/Screenshot%202025-12-01%20120435.png",
-            illustration: "https://file.garden/Z-PhMwF-KmRdflZZ/Hazbin/Screenshot%202025-12-01%20120443.png"
+            logo: "./Media/Drawings/Valentino.png",
+            illustration: "./Media/Drawings/Valentino.png"
         }
     },
     {
@@ -270,8 +270,8 @@ export const drinks = [
             ]
         },
         images: {
-            logo: "https://file.garden/Z-PhMwF-KmRdflZZ/Hazbin/Screenshot%202025-12-01%20120435.png",
-            illustration: "https://file.garden/Z-PhMwF-KmRdflZZ/Hazbin/Screenshot%202025-12-01%20120443.png"
+            logo: "./Media/Drawings/Lucifer.png",
+            illustration: "./Media/Drawings/Lucifer.png"
         }
     },
     {
@@ -315,8 +315,8 @@ export const drinks = [
             ]
         },
         images: {
-            logo: "https://file.garden/Z-PhMwF-KmRdflZZ/Hazbin/Screenshot%202025-12-01%20120435.png",
-            illustration: "https://file.garden/Z-PhMwF-KmRdflZZ/Hazbin/Screenshot%202025-12-01%20120443.png"
+            logo: "./Media/Drawings/Alastor.png",
+            illustration: "./Media/Drawings/Alastor.png"
         }
     },
     {
@@ -362,8 +362,8 @@ export const drinks = [
             ]
         },
         images: {
-            logo: "https://file.garden/Z-PhMwF-KmRdflZZ/Hazbin/Screenshot%202025-12-01%20120435.png",
-            illustration: "https://file.garden/Z-PhMwF-KmRdflZZ/Hazbin/Screenshot%202025-12-01%20120443.png"
+            logo: "./Media/Drawings/Angle.png",
+            illustration: "./Media/Drawings/Angle.png"
         }
     },
     {
@@ -409,8 +409,8 @@ export const drinks = [
             ]
         },
         images: {
-            logo: "https://file.garden/Z-PhMwF-KmRdflZZ/Hazbin/Screenshot%202025-12-01%20120435.png",
-            illustration: "https://file.garden/Z-PhMwF-KmRdflZZ/Hazbin/Screenshot%202025-12-01%20120443.png"
+            logo: "./Media/Drawings/Charlie.png",
+            illustration: "./Media/Drawings/Charlie.png"
         }
     },
     {
@@ -451,8 +451,8 @@ export const drinks = [
             ]
         },
         images: {
-            logo: "https://file.garden/Z-PhMwF-KmRdflZZ/Hazbin/Screenshot%202025-12-01%20120435.png",
-            illustration: "https://file.garden/Z-PhMwF-KmRdflZZ/Hazbin/Screenshot%202025-12-01%20120443.png"
+            logo: "./Media/Drawings/Nifty.png",
+            illustration: "./Media/Drawings/Nifty.png"
         }
     },
     {
@@ -495,8 +495,8 @@ export const drinks = [
             ]
         },
         images: {
-            logo: "https://file.garden/Z-PhMwF-KmRdflZZ/Hazbin/Screenshot%202025-12-01%20120435.png",
-            illustration: "https://file.garden/Z-PhMwF-KmRdflZZ/Hazbin/Screenshot%202025-12-01%20120443.png"
+            logo: "./Media/Drawings/Vaggi.png",
+            illustration: "./Media/Drawings/Vaggi.png"
         }
     },
     {
@@ -537,8 +537,8 @@ export const drinks = [
             ]
         },
         images: {
-            logo: "https://file.garden/Z-PhMwF-KmRdflZZ/Hazbin/Screenshot%202025-12-01%20120435.png",
-            illustration: "https://file.garden/Z-PhMwF-KmRdflZZ/Hazbin/Screenshot%202025-12-01%20120443.png"
+            logo: "./Media/Drawings/Husk.png",
+            illustration: "./Media/Drawings/Husk.png"
         }
     }
 ];
