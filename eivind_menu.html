@@ -70,7 +70,7 @@
                     { item: '75 ml Grenadine', type: 'sweet' },
                     { item: 'Etterfyll med Sprite', type: 'mixer' }
                 ],
-                garnish: ['Lilla Sukker'],
+                garnish: ['Vannmelon-skive', 'Lilla Sukker'],
                 description: 'Tøff på utsiden, søt på innsiden. En perfekt balanse mellom syre og sødme.'
             },
             {
@@ -96,9 +96,8 @@
                 iconName: 'beer',
                 iconColor: colors.red,
                 items: [
-                    { id: 'vodka', name: 'Vodka (Vanlig)', amount: '100 ml' },
-                    { id: 'cherry', name: 'Cherry Vodka', amount: '240 ml' },
-                    { id: 'bluealc', name: 'Blue Curaçao (m/alkohol)', amount: '60 ml' }
+                    { id: 'vodka', name: 'Vikingfjord Vodka (50cl)', amount: '1 stk' },
+                    { id: 'bluealc', name: 'Blue Curaçao', amount: '1 flaske' }
                 ]
             },
             {
@@ -106,12 +105,10 @@
                 iconName: 'glass-water',
                 iconColor: colors.cyan,
                 items: [
-                    { id: 'sprite', name: 'Sprite/Sitronbrus', amount: '1.5 Liter', note: 'Brukes i nesten alt' },
-                    { id: 'grenadine', name: 'Grenadine', amount: '630 ml', note: 'Mye til Vaggie/Alastor' },
-                    { id: 'limejuice', name: 'Lime Juice', amount: '330 ml', note: 'Rose\'s eller fersk' },
-
-                    { id: 'kirsebaer', name: 'Kirsebærjuice / Tart Cherry', amount: '120 ml', note: 'Viktig for alkoholfri Alastor' },
-                    { id: 'bluesirup', name: 'Blå Sirup / Gatorade', amount: '1 flaske', note: 'Alkoholfri farge' }
+                    { id: 'sprite', name: 'Sprite', amount: '2 Liter' },
+                    { id: 'grenadine', name: 'Grenadine', amount: '2 stk' },
+                    { id: 'limejuice', name: 'Lime Juice', amount: '330 ml' },
+                    { id: 'kirsebaer', name: 'Kirsebærjuice (til Alastor)', amount: '120 ml', note: 'Erstatning for Cherry Vodka' }
                 ]
             },
             {
@@ -119,11 +116,13 @@
                 iconName: 'shopping-cart',
                 iconColor: colors.yellow,
                 items: [
-                    { id: 'is', name: 'Isbiter', amount: '1-2 poser', note: 'Viktig!' },
-                    { id: 'baer', name: 'Maraschinobær', amount: '2 glass' },
-                    { id: 'mynte', name: 'Fersk Mynte', amount: '1 potter' },
-                    { id: 'lime', name: 'Fersk Lime', amount: '6-8 stk' },
-                    { id: 'sukker', name: 'Sukker til glasskant', amount: 'Lilla' }
+                    { id: 'is', name: 'Isbiter', amount: '1-2 poser' },
+                    { id: 'baer', name: 'Maraschinobær', amount: '1 glass' },
+                    { id: 'mynte', name: 'Fersk Mynte', amount: '1 potte' },
+                    { id: 'lime', name: 'Fersk Lime', amount: 'Limebåter' },
+                    { id: 'vannmelon', name: 'Vannmelon', amount: '1 skive' },
+                    { id: 'sukker_lilla', name: 'Lilla Sukker', amount: 'Til glasskant' },
+                    { id: 'sukker_bla', name: 'Blått Sukker', amount: 'Til glasskant' }
                 ]
             }
         ];
@@ -297,9 +296,7 @@
                         <div class="p-6 rounded-3xl border mt-8" style="background-color: ${colors.bg}; border-color: ${colors.border}">
                             <h3 class="text-sm font-bold uppercase tracking-widest mb-4" style="color: ${colors.yellow}">Viktige Notater</h3>
                             <ul class="space-y-2 text-sm opacity-80">
-                                <li>• <strong>Kokoskrem:</strong> Pass på å kjøpe "Coconut Cream" eller den tykke delen av kokosmelk, ikke kokosvann.</li>
                                 <li>• <strong>Kirsebærjuice:</strong> Lerum Solbærsirup kan brukes som nødløsning hvis du ikke finner Tart Cherry.</li>
-                                <li>• <strong>Mengder:</strong> Alt av blandevann er doblet opp for å sikre at det er nok til mocktails også!</li>
                             </ul>
                         </div>
                     </div>
