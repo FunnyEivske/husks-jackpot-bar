@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eivind's Cocktail Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .animate-in {
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen font-sans transition-colors duration-300">
+    <div id="app" class="p-4 md:p-8 min-h-screen">
+        <!-- Content will be injected here -->
+    </div>
+
+    <script>
+        // State
+        const state = {
+            isAlcoholic: true,
+            activeTab: 'menu',
+            checkedItems: {}
+        };
+
+        // Nord Theme Colors
+        const colors = {
+            bg: '#2E3440',      // Polar Night Darkest
+            card: '#3B4252',    // Polar Night Dark
+            border: '#4C566A',  // Polar Night Light
+            text: '#ECEFF4',    // Snow Storm
+            subtext: '#D8DEE9', // Snow Storm Darker
+            cyan: '#88C0D0',    // Frost Cyan
+            blue: '#5E81AC',    // Frost Blue
+            red: '#BF616A',     // Aurora Red
+            yellow: '#EBCB8B',  // Aurora Yellow
+            green: '#A3BE8C',   // Aurora Green
+            purple: '#B48EAD'   // Aurora Purple
+        };
+
+        // Data
+        const drinks = [
+            {
+                id: 'vox',
+                name: 'Vox',
+                tagline: 'The Electronic Overlord',
+                gradient: 'from-[#88C0D0] to-[#5E81AC]',
+                iconName: 'zap',
+                ingredients: [
+                    { item: '45 ml Malibu Rum', alt: 'Kokoskrem + Sprite splash', type: 'base' },
+                    { item: '30 ml Blue Curacao', alt: 'Blå Sirup / Gatorade', type: 'mixer' },
+                    { item: '45 ml Ananasjuice', type: 'mixer' },
+                    { item: '60 ml Sprite', type: 'mixer' },
+                    { item: '10 ml Grenadine', type: 'sweet' },
+                    { item: '15 ml Lime Juice', type: 'acid' }
+                ],
+                garnish: ['Maraschinobær', 'Limebåt', 'Blått Sukker'],
+                description: 'En elektrisk blå cocktail som lyser opp i glasset.'
+            },
+            {
+                id: 'vaggie',
+                name: 'Vaggie',
+                tagline: 'The Exorcist Protector',
+                gradient: 'from-[#B48EAD] to-[#5E81AC]',
+                iconName: 'heart',
+                ingredients: [
+                    { item: '25 ml Vodka', alt: 'Sprite', type: 'base' },
+                    { item: '15 ml Blå Curaçao', type: 'mixer' },
+                    { item: '25 ml Lime Juice', type: 'acid' },
+                    { item: '75 ml Grenadine', type: 'sweet' }
+                ],
+                garnish: ['Vannmelon-skive', 'Lilla Sukker'],
+                description: 'Tøff på utsiden, søt på innsiden. En perfekt balanse mellom syre og sødme.'
+            },
+            {
+                id: 'alastor',
+                name: 'Alastor',
+                tagline: 'The Radio Demon',
+                gradient: 'from-[#BF616A] to-[#2E3440]',
+                iconName: 'radio',
+                ingredients: [
+                    { item: '60 ml Cherry Vodka', alt: '60 ml Kirsebærjuice', type: 'base' },
+                    { item: '30 ml Grenadine', type: 'sweet' },
+                    { item: '15 ml Lime Juice', type: 'acid' },
+                    { item: '120 ml Sprite', type: 'mixer' }
+                ],
+                garnish: ['Maraschinobær', 'Fersk Mynte', 'Limebåter'],
+                description: 'En tidløs klassiker med et hint av mørke bær. Akkurat slik radioen pleide å være.'
+            }
+        ];
+
+        const shoppingList = [
+            {
+                category: 'Alkohol (Til 4 pers)',
+                iconName: 'beer',
+                iconColor: colors.red,
+                items: [
+                    { id: 'vodka', name: 'Vodka (Vanlig)', amount: '100 ml' },
+                    { id: 'cherry', name: 'Cherry Vodka', amount: '240 ml' },
+                    { id: 'malibu', name: 'Malibu (Kokosrom)', amount: '180 ml' },
+                    { id: 'bluealc', name: 'Blue Curaçao (m/alkohol)', amount: '180 ml' }
+                ]
+            },
+            {
+                category: 'Blandevann & Juice (Dobbel mengde)',
+                iconName: 'glass-water',
+                iconColor: colors.cyan,
+                items: [
+                    { id: 'sprite', name: 'Sprite/Sitronbrus', amount: '3 Liter (2x 1.5L)', note: 'Brukes i nesten alt' },
+                    { id: 'grenadine', name: 'Grenadine', amount: '1.5 Liter (2 flasker)', note: 'Mye til Vaggie/Alastor' },
+                    { id: 'limejuice', name: 'Lime Juice', amount: '660 ml (2 flasker)', note: 'Rose\'s eller fersk' },
+                    { id: 'ananas', name: 'Ananasjuice', amount: '1 Liter' },
+                    { id: 'kirsebaer', name: 'Kirsebærjuice / Tart Cherry', amount: '1 Liter', note: 'Viktig for alkoholfri Alastor' },
+                    { id: 'kokos', name: 'Kokoskrem (Coconut Cream)', amount: '2 bokser', note: 'Alkoholfri Vox' },
+                    { id: 'bluesirup', name: 'Blå Sirup / Gatorade', amount: '1 flaske', note: 'Alkoholfri farge' }
+                ]
+            },
+            {
+                category: 'Pynt & Tilbehør',
+                iconName: 'shopping-cart',
+                iconColor: colors.yellow,
+                items: [
+                    { id: 'is', name: 'Isbiter', amount: '3-4 poser', note: 'Viktig!' },
+                    { id: 'baer', name: 'Maraschinobær', amount: '2 glass' },
+                    { id: 'mynte', name: 'Fersk Mynte', amount: '2 potter' },
+                    { id: 'lime', name: 'Fersk Lime', amount: '6-8 stk' },
+                    { id: 'melon', name: 'Vannmelon', amount: '1 medium' },
+                    { id: 'sukker', name: 'Sukker til glasskant', amount: 'Blått & Lilla' }
+                ]
+            }
+        ];
+
+        // Actions
+        function toggleAlcoholic(value) {
+            state.isAlcoholic = value;
+            render();
+        }
+
+        function setActiveTab(tab) {
+            state.activeTab = tab;
+            render();
+        }
+
+        function toggleItem(id) {
+            state.checkedItems[id] = !state.checkedItems[id];
+            render();
+        }
+
+        // Render Functions
+        function render() {
+            const app = document.getElementById('app');
+
+            // Apply body styles
+            document.body.style.backgroundColor = colors.bg;
+            document.body.style.color = colors.text;
+
+            const headerHTML = `
+                <div class="max-w-4xl mx-auto mb-10 text-center">
+                    <h1 class="text-4xl md:text-5xl font-black mb-2 tracking-tighter" style="color: ${colors.cyan}">
+                        EIVIND'S COCKTAIL MENY
+                    </h1>
+                    <p class="italic text-lg" style="color: ${colors.subtext}">"Stay Tuned... for drinks!"</p>
+                    <a href="index.html" class="inline-block mt-4 text-sm hover:underline opacity-60">← Back to Main Bar</a>
+                </div>
+            `;
+
+            const modeSwitcherHTML = `
+                <div class="max-w-md mx-auto mb-8 p-1 rounded-2xl flex border" style="background-color: ${colors.card}; border-color: ${colors.border}">
+                    <button onclick="toggleAlcoholic(true)" 
+                        class="flex-1 py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all font-bold ${state.isAlcoholic ? 'shadow-md' : 'hover:opacity-80'}"
+                        style="background-color: ${state.isAlcoholic ? colors.red : 'transparent'}; color: ${state.isAlcoholic ? colors.text : colors.subtext}">
+                        <i data-lucide="beer" size="20"></i> Med Alkohol
+                    </button>
+                    <button onclick="toggleAlcoholic(false)"
+                        class="flex-1 py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all font-bold ${!state.isAlcoholic ? 'shadow-md' : 'hover:opacity-80'}"
+                        style="background-color: ${!state.isAlcoholic ? colors.cyan : 'transparent'}; color: ${!state.isAlcoholic ? colors.bg : colors.subtext}">
+                        <i data-lucide="glass-water" size="20"></i> Mocktails
+                    </button>
+                </div>
+            `;
+
+            const tabsHTML = `
+                <div class="max-w-4xl mx-auto mb-8 flex justify-center gap-4">
+                    <button onclick="setActiveTab('menu')"
+                        class="px-8 py-2 rounded-full font-bold transition-colors border"
+                        style="background-color: ${state.activeTab === 'menu' ? colors.cyan : colors.card};
+                               color: ${state.activeTab === 'menu' ? colors.bg : colors.subtext};
+                               border-color: ${state.activeTab === 'menu' ? colors.cyan : colors.border}">
+                        Meny
+                    </button>
+                    <button onclick="setActiveTab('shopping')"
+                        class="px-8 py-2 rounded-full font-bold transition-colors border"
+                        style="background-color: ${state.activeTab === 'shopping' ? colors.cyan : colors.card};
+                               color: ${state.activeTab === 'shopping' ? colors.bg : colors.subtext};
+                               border-color: ${state.activeTab === 'shopping' ? colors.cyan : colors.border}">
+                        Handleliste
+                    </button>
+                </div>
+            `;
+
+            let contentHTML = '';
+
+            if (state.activeTab === 'menu') {
+                const drinksHTML = drinks.map(drink => {
+                    const ingredientsHTML = drink.ingredients.map(ing => {
+                        const itemText = (ing.alt && !state.isAlcoholic) ? ing.alt : ing.item;
+                        return `<span class="px-3 py-1.5 rounded-lg text-sm border transition-colors hover:bg-white/5" style="background-color: ${colors.bg}; border-color: ${colors.border}">${itemText}</span>`;
+                    }).join('');
+
+                    const garnishHTML = drink.garnish.map(item => `
+                        <li class="flex items-center gap-3 text-sm">
+                            <div class="w-1.5 h-1.5 rounded-full" style="background-color: ${colors.red}"></div>
+                            ${item}
+                        </li>
+                    `).join('');
+
+                    return `
+                        <div class="group relative rounded-3xl overflow-hidden border shadow-xl transition-all hover:scale-[1.01]" style="background-color: ${colors.card}; border-color: ${colors.border}">
+                            <div class="h-2 w-full bg-gradient-to-r ${drink.gradient}"></div>
+                            <div class="p-6 md:p-8 flex flex-col md:flex-row gap-8">
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-4 mb-2">
+                                        <div class="p-4 rounded-2xl bg-gradient-to-br ${drink.gradient} shadow-lg shadow-black/20">
+                                            <i data-lucide="${drink.iconName}" class="w-6 h-6 text-[#ECEFF4]"></i>
+                                        </div>
+                                        <div>
+                                            <h2 class="text-3xl font-bold tracking-tight">${drink.name}</h2>
+                                            <p class="text-sm uppercase tracking-widest font-semibold opacity-70">${drink.tagline}</p>
+                                        </div>
+                                    </div>
+                                    <p class="mb-6 text-sm opacity-90 leading-relaxed">${drink.description}</p>
+                                    
+                                    <h3 class="text-xs font-bold uppercase tracking-widest mb-3" style="color: ${colors.cyan}">Oppskrift</h3>
+                                    <div class="flex flex-wrap gap-2 mb-6">
+                                        ${ingredientsHTML}
+                                    </div>
+                                </div>
+
+                                <div class="md:w-64 rounded-2xl p-5 border" style="background-color: ${colors.bg}; border-color: ${colors.border}">
+                                    <h3 class="text-xs font-bold uppercase tracking-widest mb-4" style="color: ${colors.cyan}">Garnish & Pynt</h3>
+                                    <ul class="space-y-3">
+                                        ${garnishHTML}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+
+                contentHTML = `<div class="grid grid-cols-1 gap-8 animate-in">${drinksHTML}</div>`;
+            } else {
+                const shoppingHTML = shoppingList.map(section => {
+                    const itemsHTML = section.items.map(item => {
+                        const isChecked = state.checkedItems[item.id];
+                        return `
+                            <div onclick="toggleItem('${item.id}')"
+                                class="flex items-center gap-4 p-4 rounded-xl cursor-pointer transition-all hover:bg-white/5 group">
+                                <div class="shrink-0 transition-colors" style="color: ${isChecked ? colors.green : colors.border}">
+                                    <i data-lucide="${isChecked ? 'check-square' : 'square'}" size="24"></i>
+                                </div>
+                                
+                                <div class="flex-1">
+                                    <div class="text-lg font-medium transition-all ${isChecked ? 'line-through opacity-40' : ''}">
+                                        ${item.name}
+                                    </div>
+                                    ${item.note ? `<div class="text-sm mt-1 transition-all ${isChecked ? 'opacity-30' : 'opacity-60'}">${item.note}</div>` : ''}
+                                </div>
+
+                                <div class="px-4 py-1.5 rounded-lg text-sm font-bold border transition-all ${isChecked ? 'opacity-40' : ''}"
+                                     style="background-color: ${colors.bg}; border-color: ${colors.border}; color: ${colors.cyan}">
+                                    ${item.amount}
+                                </div>
+                            </div>
+                        `;
+                    }).join('');
+
+                    return `
+                        <div class="rounded-3xl border overflow-hidden shadow-lg" style="background-color: ${colors.card}; border-color: ${colors.border}">
+                            <div class="p-6 border-b flex items-center gap-3" style="border-color: ${colors.border}">
+                                <i data-lucide="${section.iconName}" class="text-[${section.iconColor}]" size="20" style="color: ${section.iconColor}"></i>
+                                <h2 class="text-xl font-bold tracking-wide">${section.category}</h2>
+                            </div>
+                            <div class="p-2">
+                                ${itemsHTML}
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+
+                contentHTML = `
+                    <div class="space-y-6 animate-in">
+                        <div class="p-4 rounded-xl border flex items-start gap-3" style="background-color: rgba(136, 192, 208, 0.1); border-color: ${colors.cyan}">
+                            <i data-lucide="info" class="shrink-0 mt-0.5" size="20" style="color: ${colors.cyan}"></i>
+                            <p class="text-sm">
+                                <strong style="color: ${colors.cyan}">Tips:</strong> Klikk på boksene for å krysse av ting mens du handler. Listen husker valgene dine så lenge siden er åpen.
+                            </p>
+                        </div>
+                        ${shoppingHTML}
+                        <div class="p-6 rounded-3xl border mt-8" style="background-color: ${colors.bg}; border-color: ${colors.border}">
+                            <h3 class="text-sm font-bold uppercase tracking-widest mb-4" style="color: ${colors.yellow}">Viktige Notater</h3>
+                            <ul class="space-y-2 text-sm opacity-80">
+                                <li>• <strong>Kokoskrem:</strong> Pass på å kjøpe "Coconut Cream" eller den tykke delen av kokosmelk, ikke kokosvann.</li>
+                                <li>• <strong>Kirsebærjuice:</strong> Lerum Solbærsirup kan brukes som nødløsning hvis du ikke finner Tart Cherry.</li>
+                                <li>• <strong>Mengder:</strong> Alt av blandevann er doblet opp for å sikre at det er nok til mocktails også!</li>
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            }
+
+            app.innerHTML = `
+                ${headerHTML}
+                ${modeSwitcherHTML}
+                ${tabsHTML}
+                <div class="max-w-4xl mx-auto">
+                    ${contentHTML}
+                </div>
+                <footer class="max-w-4xl mx-auto mt-12 text-center text-xs opacity-50">
+                    <p>Created by Alastor's Helper for Eivind. Have a hell of a time!</p>
+                </footer>
+            `;
+
+            // Re-initialize icons
+            lucide.createIcons();
+        }
+
+        // Initial render
+        render();
+
+    </script>
+</body>
+
+</html>
