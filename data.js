@@ -90,55 +90,6 @@ export const drinks = [
         }
     },
     {
-        id: "vox",
-        character: "Vox",
-        name: "Shark Bite",
-        mocktail: {
-            name: "No Bite",
-            ingredients: [
-                "45ml Coconut Water or Coconut Cream mixed with a splash of Sprite (Substitute for Malibu).",
-                "30ml Blue Curacao Syrup (Non-alcoholic syrup, e.g., Monin brand) OR Blue Raspberry Gatorade/Soda.",
-                "45ml Pineapple Juice.",
-                "60ml Sprite.",
-                "7.5ml Grenadine.",
-                "15ml Lime Juice.",
-                "Garnish: Cherry, Lime wedge, Blue Sugar."
-            ],
-            instructions: [
-                "Wet rim of glass and coat with blue sugar.",
-                "Combine coconut base, blue syrup/drink, and pineapple juice in an ice-filled shaker.",
-                "Shake until well combined.",
-                "Pour into glass, add the Sprite and lime juice, and lightly stir.",
-                "Add the Grenadine last (pour slowly down the side) for the \"blood effect.\"",
-                "Garnish with lime wedge and cherry."
-            ]
-        },
-        cocktail: {
-            name: "Shark Bite",
-            ingredients: [
-                "45ml Malibu Rum.",
-                "30ml Blue Curacao.",
-                "45ml Pineapple Juice.",
-                "60ml Sprite.",
-                "7.5ml Grenadine.",
-                "15ml Lime Juice.",
-                "Garnish: Cherry and Lime, Blue Sugar."
-            ],
-            instructions: [
-                "Wet rim of glass and coat with sugar (blue sugar recommended).",
-                "Combine the liquors and pineapple juice in an ice filled cocktail shaker.",
-                "Shake until well combined.",
-                "Add the Sprite and lime juice, and lightly stir.",
-                "Add the grenadine last for the blood effect.",
-                "Garnish with a lime wedge and cherry and enjoy!"
-            ]
-        },
-        images: {
-            logo: "./Media/Drawings/Vox.png",
-            illustration: "./Media/Drawings/Vox.png"
-        }
-    },
-    {
         id: "cherri",
         character: "Cherri",
         name: "Cherry Bomb",
